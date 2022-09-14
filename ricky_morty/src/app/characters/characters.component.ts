@@ -18,4 +18,6 @@ export class CharactersComponent implements OnInit {
          .subscribe( result => this.res = result);
   }
 
+
+
 }

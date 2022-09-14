@@ -9,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
-import {HttpClientModule,HttpClient} from '@angular/common/http'
+import {HttpClientModule,HttpClient} from '@angular/common/http';
+import { SeeMoreComponent } from './see-more/see-more.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {HttpClientModule,HttpClient} from '@angular/common/http'
     NavbarComponent,
     CharactersComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    SeeMoreComponent
   ],
   imports: [
     BrowserModule,
