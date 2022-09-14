@@ -14,7 +14,7 @@ export class CharactersComponent implements OnInit {
   constructor(private cServ:CharacService) { }
 
   ngOnInit(){
-    this.cServ.retornar()
+    this.cServ.retornar("1,2,3,4,5,6,7,8")
          .subscribe( result => this.res = result);
   }
 
