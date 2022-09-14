@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { CharacService } from '../charac.service';
 
 @Component({
   selector: 'app-characters',
@@ -10,18 +11,13 @@ export class CharactersComponent implements OnInit {
 
   res: any = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private cServ:CharacService) { }
 
-  ngOnInit(): void {
-    this.http.get("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8")
-         .subscribe(
-      result => {
-        this.res = result;
-      },
-      error => {
-        console.log("hay problemas");
-      }
-    );
+  ngOnInit(){
+    this.cServ.retornar("1,2,3,4,5,6,7,8")
+         .subscribe( result => this.res = result);
   }
+
+
 
 }

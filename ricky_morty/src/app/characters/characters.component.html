@@ -1,17 +1,21 @@
 <div class="container">
   <br><br><br>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col"  *ngFor="let r of res">
+  <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="res!=null else espera">
+    <div class="col" *ngFor="let r of res">
       <div class="card">
         <img src={{r.image}} class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{r.name}}</h5>
           <br>
           <div class="d-grid gap-2 col-10 mx-auto">
-            <button class="btn btn-warning " type="button"> See more</button>
+            <button routerLink="/more" [queryParams]="{id: r.id}" class="btn btn-warning " type="button"> See
+              more</button>
+
+
           </div>
 
         </div>
       </div>
     </div>
-</div>
+  </div>
+  <ng-template #espera> No hay datos que mostrar por ahora....</ng-template>
