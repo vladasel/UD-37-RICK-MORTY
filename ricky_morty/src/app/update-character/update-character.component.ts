@@ -46,6 +46,7 @@ export class UpdateCharacterComponent implements OnInit {
       .subscribe(
         value => {
           this.router.navigate(['/characters']);
+          alert("El personaje con el ID: "+this.id+" a sido actualizado")
         }, error => {// do something with error
         }
       );

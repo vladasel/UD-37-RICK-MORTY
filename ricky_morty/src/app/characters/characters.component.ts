@@ -15,7 +15,7 @@ export class CharactersComponent implements OnInit {
   delete() {
     throw new Error('Method not implemented.');
   }
-  id: string | null = "";
+  id: any | null = "";
   res: any = null;
 
   constructor(private cServ: CharacService, private route: ActivatedRoute,public router: Router) { }
@@ -41,6 +41,7 @@ export class CharactersComponent implements OnInit {
         result => {
           this.res = result
           console.log(result);
+          confirm("se a eliminado el personaje con ID:"+id)
           window.location.reload();
         });
   }

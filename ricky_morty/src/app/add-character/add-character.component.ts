@@ -42,11 +42,12 @@ public add_form:FormGroup;
       species: this.add_form.get('species')?.value,
       gender: this.add_form.get('gender')?.value,
       origin: this.add_form.get('origin')?.value,
-      image: "https://rickandmortyapi.com/api/character/avatar/183.jpeg"
+      image: "https://rickandmortyapi.com/api/character/avatar/18.jpeg"
     };
     this.serv.create(data)
       .subscribe(
         response => {
+          alert("se a añadido un nuevo personaje! ")
           console.log(response);
           this.router.navigate(['/characters']);
         },
