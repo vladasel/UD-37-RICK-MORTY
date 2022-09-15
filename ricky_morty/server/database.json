@@ -53,6 +53,24 @@
       "origin": "pepe",
       "image": "https://rickandmortyapi.com/api/character/avatar/183.jpeg",
       "id": 9
+    },
+    {
+      "name": "x",
+      "status": "x",
+      "species": "x",
+      "gender": "xsdfg",
+      "origin": "xsdfsrdhgbdet",
+      "image": "https://rickandmortyapi.com/api/character/avatar/183.jpeg",
+      "id": 10
+    },
+    {
+      "name": "desfg",
+      "status": "sgfr",
+      "species": "sfrg",
+      "gender": "dfrg",
+      "origin": "gfdr",
+      "image": "https://rickandmortyapi.com/api/character/avatar/183.jpeg",
+      "id": 11
     }
   ]
 }

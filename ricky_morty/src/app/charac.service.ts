@@ -3,7 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Charcater } from './models/charcater.model';
 import { Observable } from 'rxjs';
 
-const url = "http://localhost:3000/characters";
+const url = "https://json---server.herokuapp.com/characters";
 
 @Injectable({
   providedIn: 'root'
