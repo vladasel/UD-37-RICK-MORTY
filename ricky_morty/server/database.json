@@ -1,0 +1,58 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Earth",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Beth Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Jerry Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+    },
+    {
+      "name": "ana",
+      "status": "a",
+      "species": "a",
+      "gender": "adtfghtd",
+      "origin": "aetdyhertd",
+      "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+      "id": 8
+    },
+    {
+      "name": "pepe",
+      "status": "pepe",
+      "species": "pepe",
+      "gender": "pepe",
+      "origin": "pepe",
+      "image": "https://rickandmortyapi.com/api/character/avatar/183.jpeg",
+      "id": 9
+    }
+  ]
+}

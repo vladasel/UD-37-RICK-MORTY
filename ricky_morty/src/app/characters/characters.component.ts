@@ -2,22 +2,48 @@ import { Component, OnInit } from '@angular/core';
 
 import { CharacService } from '../charac.service';
 
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
-
+  delete() {
+    throw new Error('Method not implemented.');
+  }
+  id: string | null = "";
   res: any = null;
 
-  constructor(private cServ:CharacService) { }
+  constructor(private cServ: CharacService, private route: ActivatedRoute,public router: Router) { }
 
-  ngOnInit(){
-    this.cServ.retornar("1,2,3,4,5,6,7,8")
-         .subscribe( result => this.res = result);
+  ngOnInit() {
+    this.route.queryParams
+      .subscribe(params => {
+        this.id = params['id'];
+      }
+      );
+
+    this.cServ.getAll()
+      .subscribe(result => this.res = result);
+
+
+
+
   }
 
+  del(id: any) {
+    this.cServ.delete(id)
+      .subscribe(
+        result => {
+          this.res = result
+          console.log(result);
+          window.location.reload();
+        });
+  }
 
 
 }

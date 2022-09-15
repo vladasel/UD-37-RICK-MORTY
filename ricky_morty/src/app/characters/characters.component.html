@@ -1,5 +1,7 @@
 <div class="container">
   <br><br><br>
+  <button routerLink="/new" class="btn btn-warning " type="button">Add Character</button>
+  <br><br><br>
   <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="res!=null else espera">
     <div class="col" *ngFor="let r of res">
       <div class="card">
@@ -10,7 +12,8 @@
           <div class="d-grid gap-2 col-10 mx-auto">
             <button routerLink="/more" [queryParams]="{id: r.id}" class="btn btn-warning " type="button"> See
               more</button>
-
+            <button data-bs-toggle="modal" class="btn btn-danger " (click)="del(r.id)"
+              type="button" >Delete</button>
 
           </div>
 
@@ -18,4 +21,22 @@
       </div>
     </div>
   </div>
-  <ng-template #espera> No hay datos que mostrar por ahora....</ng-template>
+  <div class="modal" tabindex="-1" id="estasSeguro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Character</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure???</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete()">YES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #espera> No hay datos que mostrar por ahora....</ng-template>

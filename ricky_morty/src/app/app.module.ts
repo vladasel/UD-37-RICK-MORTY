@@ -10,7 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
 import {HttpClientModule,HttpClient} from '@angular/common/http';
-import { SeeMoreComponent } from './see-more/see-more.component'
+import { SeeMoreComponent } from './see-more/see-more.component';
+import { AddCharacterComponent } from './add-character/add-character.component';
+import { UpdateCharacterComponent } from './update-character/update-character.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,13 +23,17 @@ import { SeeMoreComponent } from './see-more/see-more.component'
     CharactersComponent,
     AboutComponent,
     HomeComponent,
-    SeeMoreComponent
+    SeeMoreComponent,
+    AddCharacterComponent,
+    UpdateCharacterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
